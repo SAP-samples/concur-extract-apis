@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "ffad8c0a-274f-4218-8409-5cc999a2ad17",
+		"name": "Extract",
+		"description": "[https://developer.concur.com/api-reference/common/extracts/v1.extracts.html](https://developer.concur.com/api-reference/common/extracts/v1.extracts.html)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15266923"
+	},
+	"item": [
+		{
+			"name": "01. Get Extract Definitions",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "concur-correlationid",
+						"value": "NameOfApp",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{dataCenterURI}}/api/expense/extract/v1.0",
+					"protocol": "https",
+					"host": [
+						"{{dataCenterURI}}"
+					],
+					"path": [
+						"api",
+						"expense",
+						"extract",
+						"v1.0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "02. Run Specific Extract",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "concur-correlationid",
+						"value": "NameOfApp",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{dataCenterURI}}/api/expense/extract/v1.0/{{definitionID}}/job",
+					"protocol": "https",
+					"host": [
+						"{{dataCenterURI}}"
+					],
+					"path": [
+						"api",
+						"expense",
+						"extract",
+						"v1.0",
+						"{{definitionID}}",
+						"job"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "03. Get Job Status",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "concur-correlationid",
+						"value": "NameOfApp",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{dataCenterURI}}/api/expense/extract/v1.0/{{definitionID}}/job/{{jobID}}/status",
+					"protocol": "https",
+					"host": [
+						"{{dataCenterURI}}"
+					],
+					"path": [
+						"api",
+						"expense",
+						"extract",
+						"v1.0",
+						"{{definitionID}}",
+						"job",
+						"{{jobID}}",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "04. Get Extract FIle",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "concur-correlationid",
+						"value": "NameOfApp",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://{{dataCenterURI}}/api/expense/extract/v1.0/{{definitionID}}/job/{{jobID}}/file",
+					"protocol": "https",
+					"host": [
+						"{{dataCenterURI}}"
+					],
+					"path": [
+						"api",
+						"expense",
+						"extract",
+						"v1.0",
+						"{{definitionID}}",
+						"job",
+						"{{jobID}}",
+						"file"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{accessToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "definitionID",
+			"value": "Job Definition ID from 01. Get Extract Definitions",
+			"type": "string"
+		},
+		{
+			"key": "jobID",
+			"value": "Job ID from 02. Run Specific Extract",
+			"type": "string"
+		}
+	]
+}
