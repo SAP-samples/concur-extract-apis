@@ -1,4 +1,4 @@
-# [SAP Concur Client Web Services - Extract API]
+# SAP Concur Client Web Services - Extract API
 <!-- Please include descriptive title -->
 
 <!--- Register repository https://api.reuse.software/register, then add REUSE badge:
@@ -6,22 +6,28 @@
 -->
 
 ## Description
-<!-- Please include SEO-friendly description -->
+This repository provides basic examples of Extract APIs used by SAP Concur customers. The calls within the collection demonstrate the following process steps:
+1) Get Extract Definitions
+2) Run Extract
+3) Retrieve Extract
 
 ## Requirements
-
-## Download and Installation
+In order to use this repository you will need:
+1) The Web Service Administration role within SAP Concur (to be able to create SAP Concur applications)
+2) Postman (to be able to use the collection included in this repository)
+3) Have downloaded / installed the Authentication Postman collection [found here](https://github.com/SAP-samples/concur-web-services-authentication)
 
 ## Known Issues
-<!-- You may simply state "No known issues. -->
+No known issues.
 
 ## How to obtain support
-[Create an issue](https://github.com/SAP-samples/<repository-name>/issues) in this repository if you find a bug or have questions about the content.
+This project is provided "as-is", with no expected changes or support.
+The complete Extract API documentation [can be found here](https://developer.concur.com/api-reference/common/extracts/v1.extracts.html).
  
-For additional support, [ask a question in SAP Community](https://answers.sap.com/questions/ask.html).
+For additional support, please [ask a question in SAP Community](https://answers.sap.com/questions/ask.html).
 
 ## Contributing
-If you wish to contribute code, offer fixes or improvements, please send a pull request. Due to legal reasons, contributors will be asked to accept a DCO when they create the first pull request to this project. This happens in an automated fashion during the submission process. SAP uses [the standard DCO text of the Linux Foundation](https://developercertificate.org/).
+This repository is provided "as-is".
 
 ## License
 Copyright (c) 2023 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSE) file.
